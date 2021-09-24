@@ -1,9 +1,9 @@
 [package]
-name="clang"
+name="runno-clang"
 version="0.1.0"
 description="Clang is a compiler front end for the C, C++, Objective-C and Objective-C++ programming languages"
 readme = "README.md"
-repository = "https://github.com/wapm-packages/clang"
+repository = "https://github.com/taybenlor/clang"
 
 [[module]]
 name="clang"
@@ -22,11 +22,11 @@ abi = "wasi"
 wasi = "0.0.0-unstable"
 
 [[command]]
-name="clang"
+name="runno-clang"
 module="clang"
 
 [[command]]
-name="wasm-ld"
+name="runno-wasm-ld"
 module="wasm-ld"
 
 [fs]
