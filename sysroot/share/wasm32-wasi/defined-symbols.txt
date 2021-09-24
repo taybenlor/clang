@@ -52,9 +52,6 @@ __flbf
 __floatscan
 __fmodeflags
 __fopen_rb_ca
-__fpclassify
-__fpclassifyf
-__fpclassifyl
 __fpending
 __fpurge
 __fputwc_unlocked
@@ -84,6 +81,7 @@ __getentropy
 __getopt_msg
 __gmtime_r
 __hwcap
+__inet_aton
 __intscan
 __invtrigl_R
 __isalnum_l
@@ -169,9 +167,6 @@ __secs_to_zone
 __seed48
 __shgetc
 __shlim
-__signbit
-__signbitf
-__signbitl
 __signgam
 __sin
 __sindf
@@ -241,8 +236,8 @@ __wasilibc_find_relpath
 __wasilibc_init_preopen
 __wasilibc_register_preopened_fd
 __wasilibc_rmdirat
-__wasilibc_rmfileat
 __wasilibc_tell
+__wasilibc_unlinkat
 __wcscoll_l
 __wcsftime_l
 __wcsxfrm_l
@@ -404,6 +399,7 @@ ctanh
 ctanhf
 ctanhl
 ctanl
+ctime
 ctime_r
 difftime
 dirfd
@@ -456,15 +452,19 @@ fdopen
 fdopendir
 feclearexcept
 fegetenv
+fegetexceptflag
 fegetround
+feholdexcept
 feof
 feof_unlocked
 feraiseexcept
 ferror
 ferror_unlocked
 fesetenv
+fesetexceptflag
 fesetround
 fetestexcept
+feupdateenv
 fflush
 fflush_unlocked
 ffs
@@ -600,6 +600,8 @@ ilogbf
 ilogbl
 imaxabs
 imaxdiv
+in6addr_any
+in6addr_loopback
 index
 inet_aton
 inet_ntop
@@ -990,6 +992,7 @@ towlower_l
 towupper
 towupper_l
 trunc
+truncate
 truncf
 truncl
 tsearch

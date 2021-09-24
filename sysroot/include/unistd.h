@@ -53,6 +53,7 @@ int dup2(int, int);
 int dup3(int, int, int);
 #endif
 off_t lseek(int, off_t, int);
+#ifndef BINJI_HACK
 #ifdef __wasilibc_unmodified_upstream /* Optimize the readonly case of lseek */
 #else
 /*
@@ -74,6 +75,7 @@ off_t __wasilibc_tell(int);
      ? __wasilibc_tell(__f)            \
      : lseek(__f, __o, __w);           \
   })
+#endif
 #endif
 int fsync(int);
 int fdatasync(int);

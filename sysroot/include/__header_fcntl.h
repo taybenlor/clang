@@ -2,6 +2,8 @@
 #define __wasilibc___header_fcntl_h
 
 #include <wasi/core.h>
+#include <__seek.h>
+#include <__mode_t.h>
 
 #define O_APPEND __WASI_FDFLAG_APPEND
 #define O_DSYNC __WASI_FDFLAG_DSYNC
@@ -19,7 +21,17 @@
 #define O_SEARCH   (0x08000000)
 #define O_WRONLY   (0x10000000)
 
+/*
+ * O_CLOEXEC is defined to be zero, as WASI has no exec-style functions.
+ */
 #define O_CLOEXEC  (0)
+
+/*
+ * O_TTY_INIT is defined to be zero, meaning that WASI implementations are
+ * expected to always initialize a terminal the first time it's opened.
+ */
+#define O_TTY_INIT (0)
+
 #define O_NOCTTY   (0)
 
 #define O_RDWR (O_RDONLY | O_WRONLY)

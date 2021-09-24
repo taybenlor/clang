@@ -1,4 +1,4 @@
-// #ifdef __wasilibc_unmodified_upstream /* Use the compiler's stddef.h */
+#ifdef __wasilibc_unmodified_upstream /* Use the compiler's stddef.h */
 #ifndef _STDDEF_H
 #define _STDDEF_H
 
@@ -24,14 +24,14 @@
 #endif
 
 #endif
-// #else
+#else
 
-// /* Just use the compiler's stddef.h. */
-// #include_next <stddef.h>
+/* Just use the compiler's stddef.h. */
+#include_next <stddef.h>
 
-// /* Define musl's include guard, in case any code depends on that. */
-// #if defined(__STDDEF_H) && !defined(_STDDEF_H)
-// #define _STDDEF_H
-// #endif
+/* Define musl's include guard, in case any code depends on that. */
+#if defined(__STDDEF_H) && !defined(_STDDEF_H)
+#define _STDDEF_H
+#endif
 
-// #endif
+#endif

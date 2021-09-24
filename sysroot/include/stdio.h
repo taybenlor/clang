@@ -49,7 +49,7 @@ extern "C" {
 #define SEEK_CUR 1
 #define SEEK_END 2
 #else
-#include <__header_unistd.h>
+#include <__seek.h>
 #endif
 
 #define _IOFBF 0
@@ -157,16 +157,20 @@ FILE *tmpfile(void) __attribute__((__deprecated__("tmpfile is not defined on WAS
 FILE *fmemopen(void *__restrict, size_t, const char *__restrict);
 FILE *open_memstream(char **, size_t *);
 FILE *fdopen(int, const char *);
+#ifdef __wasilibc_unmodified_upstream /* WASI has no popen */
 FILE *popen(const char *, const char *);
 int pclose(FILE *);
+#endif
 int fileno(FILE *);
 int fseeko(FILE *, off_t, int);
 off_t ftello(FILE *);
 int dprintf(int, const char *__restrict, ...);
 int vdprintf(int, const char *__restrict, __isoc_va_list);
+#if defined(__wasilibc_unmodified_upstream) || defined(_REENTRANT)
 void flockfile(FILE *);
 int ftrylockfile(FILE *);
 void funlockfile(FILE *);
+#endif
 int getc_unlocked(FILE *);
 int getchar_unlocked(void);
 int putc_unlocked(int, FILE *);

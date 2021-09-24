@@ -20,6 +20,8 @@
 #include <__header_unistd.h>
 #include <__macro_FD_SETSIZE.h>
 #include <__macro_PAGESIZE.h>
+#include <__mode_t.h>
+#include <__seek.h>
 #include <__struct_dirent.h>
 #include <__struct_in6_addr.h>
 #include <__struct_in_addr.h>
@@ -100,13 +102,7 @@
 #include <memory.h>
 #include <monetary.h>
 #include <mqueue.h>
-#include <net/ethernet.h>
-#include <net/if.h>
-#include <net/if_arp.h>
-#include <net/route.h>
-#include <netinet/ether.h>
 #include <netinet/icmp6.h>
-#include <netinet/if_ether.h>
 #include <netinet/igmp.h>
 #include <netinet/in.h>
 #include <netinet/in_systm.h>
@@ -155,10 +151,8 @@
 #include <sys/syscall.h>
 #include <sys/sysinfo.h>
 #include <sys/sysmacros.h>
-#include <sys/termios.h>
 #include <sys/time.h>
 #include <sys/timeb.h>
-#include <sys/timerfd.h>
 #include <sys/times.h>
 #include <sys/timex.h>
 #include <sys/ttydefaults.h>
@@ -166,11 +160,9 @@
 #include <sys/uio.h>
 #include <sys/un.h>
 #include <sys/utsname.h>
-#include <sys/xattr.h>
 #include <syscall.h>
 #include <sysexits.h>
 #include <tar.h>
-#include <termios.h>
 #include <tgmath.h>
 #include <threads.h>
 #include <time.h>
