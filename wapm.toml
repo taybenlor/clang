@@ -1,5 +1,5 @@
 [package]
-name="runno-clang"
+name="taybenlor/runno-clang"
 version="0.1.0"
 description="Clang is a compiler front end for the C, C++, Objective-C and Objective-C++ programming languages"
 readme = "README.md"
